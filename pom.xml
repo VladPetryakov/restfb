@@ -375,10 +375,13 @@
       </build>
     </profile>
     <profile>
-      <id>jdk-8-javadoc</id>
+      <id>disable-java8-doclint</id>
       <activation>
-        <jdk>(,1.8]</jdk>
+        <jdk>[1.8,)</jdk>
       </activation>
+	  <properties>
+            <doclint>none</doclint>
+      </properties>
       <build>
         <plugins>
           <plugin>
